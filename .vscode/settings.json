@@ -1,0 +1,40 @@
+{
+  // Configure ESLint to automatically fix linting issues on save
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+
+  // Format code using Prettier
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  // Configure TypeScript compiler options
+  "typescript.check.npmIsInstalled": false,
+  "typescript.validate.enable": false,
+  "typescript.tsdk": "node_modules/typescript/lib",
+
+  // Configure Jest test runner
+  "jest.rootPath": "src",
+  "jest.moduleFileExtensions": ["js", "jsx", "ts", "tsx"],
+  "jest.transform": {
+    "^.+\\.(js|jsx|ts|tsx)$": "<rootDir>/node_modules/babel-jest"
+  },
+
+  // Exclude build and output directories from search
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/.next": true
+  },
+
+  // Configure ESLint
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "eslint.workingDirectories": [
+    { "directory": "./src", "changeProcessCWD": true }
+  ]
+}
